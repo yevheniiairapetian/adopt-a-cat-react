@@ -25,23 +25,29 @@ const animalsToAdopt = [
   },
 ];
 
-const Card = (arr) => {
+const Card = (props) => {
 
   return (
     <div className="card">
-        <h4>{ arr.name }</h4>
+        <h4>{ props.name }</h4>
         <img src="" alt=""></img>
     </div>
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function animalsToReactComponents() {
+
+}
+
 root.render(
-  [
-    <Card name={ animalsToAdopt[0].name } />,
-    <Card name={ animalsToAdopt[1].name } />,
-    <Card name={ animalsToAdopt[2].name } />,
-    <Card name={ animalsToAdopt[3].name } />,
-    <Card name={ animalsToAdopt[4].name } />,
-  ]
+  // [
+  //   <Card name={ animalsToAdopt[0].name } />,
+  //   <Card name={ animalsToAdopt[1].name } />,
+  //   <Card name={ animalsToAdopt[2].name } />,
+  //   <Card name={ animalsToAdopt[3].name } />,
+  //   <Card name={ animalsToAdopt[4].name } />,
+  // ]
+  animalsToAdopt.map( animalsToReactComponents )
 );

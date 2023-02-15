@@ -24,13 +24,23 @@ const animalsToAdopt = [
   },
 ];
 
+const Card = () => {
+
+  return (
+    <div className="card">
+        <h4>Dummy</h4>
+        <img src="" alt=""></img>
+    </div>
+  );
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   [
-    <div>{ animalsToAdopt[0].name }</div>,
-    <div>animalsToAdopt[1].name</div>,
-    <div>animalsToAdopt[2].name</div>,
-    <div>animalsToAdopt[3].name</div>,
-    <div>animalsToAdopt[4].name</div>,
+    <Card name={ animalsToAdopt[0].name } />,
+    <Card name={ animalsToAdopt[1].name } />,
+    <Card name={ animalsToAdopt[2].name } />,
+    <Card name={ animalsToAdopt[3].name } />,
+    <Card name={ animalsToAdopt[4].name } />,
   ]
 );

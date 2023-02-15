@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './style.css';
 
 const animalsToAdopt = [
   {
@@ -24,11 +25,11 @@ const animalsToAdopt = [
   },
 ];
 
-const Card = () => {
+const Card = (arr) => {
 
   return (
     <div className="card">
-        <h4>Dummy</h4>
+        <h4>{ arr.name }</h4>
         <img src="" alt=""></img>
     </div>
   );

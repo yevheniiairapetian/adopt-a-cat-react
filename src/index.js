@@ -30,7 +30,7 @@ const Card = (props) => {
   return (
     <div className="card">
         <h4>{ props.name }</h4>
-        <img src="" alt=""></img>
+        <img src={props.picture} alt={props.name}></img>
     </div>
   );
 }
@@ -38,7 +38,13 @@ const Card = (props) => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function animalsToReactComponents() {
-
+  return ( 
+  <div>
+      {animalsToAdopt.map((key) => (
+        <Card name={key.name} picture={key.picture} />
+      ))}
+  </div>
+  ); 
 }
 
 root.render(
@@ -49,5 +55,5 @@ root.render(
   //   <Card name={ animalsToAdopt[3].name } />,
   //   <Card name={ animalsToAdopt[4].name } />,
   // ]
-  animalsToAdopt.map( animalsToReactComponents )
+  animalsToReactComponents()
 );
